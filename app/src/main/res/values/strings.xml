@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IPCClient</string>
+    <string name="process_id_of_server">PID of MP Plus Service</string>
+    <string name="connection_count_of_server">Call Counter of MP Plus Service</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="say_something_to_server">Say Something to the Server</string>
+    <string name="salut">Salut!</string>
+    <string name="title_aidl">AIDL</string>
+    <string name="title_messenger">Messenger</string>
+    <string name="connect_via_messenger">Send Intent</string>
+    <string name="send_broadcast">Send Broadcast</string>
+    <string name="broadcast_sent">Broadcast Sent</string>
+    <string name="create_via_messenger">Create Paymente</string>
+    <string name="getStatus_via_messenger">Get Status</string>
+    <string name="cancel_via_messenger">Cancel Payment</string>
+</resources>
