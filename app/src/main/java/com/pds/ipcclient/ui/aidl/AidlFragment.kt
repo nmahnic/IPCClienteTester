@@ -80,11 +80,11 @@ class AidlFragment : Fragment(), ServiceConnection {
 
             }
             "CANCEL" -> {
-                iRemoteService?.cancelSaleIntent("#1_1")
+                iRemoteService?.cancelSaleIntent(1,androidId)
 
             }
             "STATUS" -> {
-                iRemoteService?.getPaymentStatus("#1_1")
+                iRemoteService?.getPaymentStatus(1,androidId)
             }
             else -> { null }
         }

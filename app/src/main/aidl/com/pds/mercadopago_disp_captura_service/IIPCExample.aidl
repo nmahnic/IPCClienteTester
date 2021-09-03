@@ -13,9 +13,9 @@ interface IIPCExample {
     /** Set displayed value of screen */
     void setDisplayedValue(String packageName, int pid, String data);
 
-    int getPaymentStatus(String extRef);
+    int getPaymentStatus(int extRef, String androidId);
 
-    int createSaleIntent(double amount, String orderId, String androidID);
+    int createSaleIntent(double amount, String orderId, String androidId);
 
-    int cancelSaleIntent(String extRef);
+    int cancelSaleIntent(int extRef, String androidId);
 }
