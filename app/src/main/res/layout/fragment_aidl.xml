@@ -13,11 +13,19 @@
         android:text="@string/say_something_to_server"
         android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/tv_client_data"
+    <EditText
+        android:id="@+id/edt_externalRef"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/salut"
+        android:text="@string/salut"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/tv_externalRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="35sp" />
 

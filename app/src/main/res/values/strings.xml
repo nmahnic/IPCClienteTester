@@ -5,7 +5,7 @@
     <string name="connect">Connect</string>
     <string name="disconnect">Disconnect</string>
     <string name="say_something_to_server">Say Something to the Server</string>
-    <string name="salut">Salut!</string>
+    <string name="salut">14</string>
     <string name="title_aidl">AIDL</string>
     <string name="title_messenger">Messenger</string>
     <string name="connect_via_messenger">Send Intent</string>

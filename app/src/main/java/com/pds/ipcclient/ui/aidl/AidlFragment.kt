@@ -77,17 +77,18 @@ class AidlFragment : Fragment(), ServiceConnection {
         val response = when(state){
             "CREATE" -> {
                 iRemoteService?.createSaleIntent(123.4, "#1", androidId)
-
             }
             "CANCEL" -> {
-                iRemoteService?.cancelSaleIntent(1,androidId)
-
+                val extRef = binding.edtExternalRef.text.toString()
+                iRemoteService?.cancelSaleIntent(extRef.toInt(), androidId)
             }
             "STATUS" -> {
-                iRemoteService?.getPaymentStatus(1,androidId)
+                val extRef = binding.edtExternalRef.text.toString()
+                iRemoteService?.getPaymentStatus(extRef.toInt(), androidId)
             }
             else -> { null }
         }
+        binding.tvExternalRef.text = response.toString()
         Log.d("NM", "$state ResponseCode: $response")
         activity?.applicationContext?.unbindService(this)
     }
