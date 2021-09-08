@@ -13,15 +13,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import android.provider.Settings
 import android.util.Log
-import com.nicomahnic.ipcclient.R
 import com.nicomahnic.ipcclient.databinding.FragmentAidlBinding
-import com.pds.mercadopago_disp_captura_service.IIPCExample
+import com.pds.mercadopago_disp_captura_service.CaptureDevicesAIDL
 
 
 class AidlFragment : Fragment(), ServiceConnection {
 
     private lateinit var binding: FragmentAidlBinding
-    var iRemoteService: IIPCExample? = null
+    var iRemoteService: CaptureDevicesAIDL? = null
 
 
     private lateinit var androidId : String
@@ -59,7 +58,7 @@ class AidlFragment : Fragment(), ServiceConnection {
 
     private fun connectToRemoteService() {
         val intent = Intent("aidlexample")
-        val pack = IIPCExample::class.java.`package`
+        val pack = CaptureDevicesAIDL::class.java.`package`
         pack?.let {
             intent.setPackage(pack.name)
             activity?.applicationContext?.bindService(
@@ -71,7 +70,7 @@ class AidlFragment : Fragment(), ServiceConnection {
     override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
         // Gets an instance of the AIDL interface named IIPCExample,
         // which we can use to call on the service
-        iRemoteService = IIPCExample.Stub.asInterface(service)
+        iRemoteService = CaptureDevicesAIDL.Stub.asInterface(service)
         binding.txtServerPid.text = iRemoteService?.pid.toString()
         binding.txtServerConnectionCount.text = iRemoteService?.connectionCount.toString()
         val response = when(state){

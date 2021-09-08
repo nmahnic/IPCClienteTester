@@ -1,9 +1,9 @@
-// IIPCExample.aidl
+// CaptureDevicesAIDL.aidl
 package com.pds.mercadopago_disp_captura_service;
 
 // Declare any non-default types here with import statements
 
-interface IIPCExample {
+interface CaptureDevicesAIDL {
     /** Request the process ID of this service */
     int getPid();
 
